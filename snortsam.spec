@@ -22,7 +22,7 @@ install:
 EOF
 
 %build
-./makesnortsam.sh
+sh ./makesnortsam.sh
 cd src
 make samtool
 #%make "CFLAGS=%optflags"
