@@ -10,6 +10,7 @@ License:    GPL
 Group:      Networking/Other
 URL:        http://www.snortsam.net/
 Source:     http://www.snortsam.net/files/snortsam/%{name}-src-%{version}.tar.gz
+Patch0:     snortsam-ifdebug.diff
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
@@ -17,6 +18,7 @@ Snortsam is a daemon that interacts with snort to use a firewall.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 cat > Makefile <<EOF
 install:
 EOF
