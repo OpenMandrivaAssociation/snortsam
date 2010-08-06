@@ -1,6 +1,6 @@
 %define name    snortsam
 %define version 2.69
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -10,6 +10,8 @@ License:    BSD
 Group:      Networking/Other
 URL:        http://www.snortsam.net/
 Source:     http://www.snortsam.net/files/snortsam/%{name}-src-%{version}.tar.gz
+# fix a syntax error in Makefile :
+# Makefile:23: *** séparateur manquant . Arrêt.
 Patch0:     snortsam-ifdebug.diff
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
