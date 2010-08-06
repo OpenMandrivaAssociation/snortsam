@@ -6,7 +6,7 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:    SnortSAM module
-License:    GPL
+License:    BSD
 Group:      Networking/Other
 URL:        http://www.snortsam.net/
 Source:     http://www.snortsam.net/files/snortsam/%{name}-src-%{version}.tar.gz
@@ -47,10 +47,8 @@ install conf/snortsam.conf.sample %{buildroot}%{_sysconfdir}/snortsam.conf
 
 %files
 %defattr(-,root,root)
-%doc docs/*
-#%_bindir/*
+%doc docs/{README*,LICENSE,INSTALL,FAQ,CREDITS,BUGS,AUTHORS}
 %_sbindir/*
-#%_mandir/man1/*
 %{_sysconfdir}/snortsam.conf
 
 
