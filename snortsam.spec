@@ -1,6 +1,6 @@
 %define name    snortsam
-%define version 2.69
-%define release %mkrel 2
+%define version 2.70
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -10,9 +10,6 @@ License:    BSD
 Group:      Networking/Other
 URL:        http://www.snortsam.net/
 Source:     http://www.snortsam.net/files/snortsam/%{name}-src-%{version}.tar.gz
-# fix a syntax error in Makefile :
-# Makefile:23: *** séparateur manquant . Arrêt.
-Patch0:     snortsam-ifdebug.diff
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
@@ -20,7 +17,6 @@ Snortsam is a daemon that interacts with snort to use a firewall.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 cat > Makefile <<EOF
 install:
 EOF
