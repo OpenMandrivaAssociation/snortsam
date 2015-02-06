@@ -1,6 +1,6 @@
 %define name    snortsam
 %define version 2.70
-%define release %mkrel 1
+%define release 2
 
 Name:		%{name}
 Version:	%{version}
