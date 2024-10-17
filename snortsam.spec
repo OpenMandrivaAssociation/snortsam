@@ -8,7 +8,7 @@ Release:	%{release}
 Summary:    SnortSAM module
 License:    BSD
 Group:      Networking/Other
-URL:        http://www.snortsam.net/
+URL:        https://www.snortsam.net/
 Source:     http://www.snortsam.net/files/snortsam/%{name}-src-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
