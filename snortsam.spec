@@ -12,6 +12,7 @@ URL:        https://www.snortsam.net/
 Source:     http://www.snortsam.net/files/snortsam/%{name}-src-%{version}.tar.gz
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
+BuildRequires:	make
 %description
 Snortsam is a daemon that interacts with snort to use a firewall.
 
